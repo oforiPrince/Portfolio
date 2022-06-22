@@ -16,7 +16,6 @@ class Social(models.Model):
     name = models.CharField(max_length=100)
     icon = models.ImageField(upload_to='social_icons', blank=True)
     url = models.CharField(max_length=100)
-    user = models.ForeignKey('accounts.User', on_delete=models.CASCADE)
 
 
 class Service(models.Model):
@@ -56,7 +55,6 @@ class AcquiredSkill(models.Model):
     name = models.CharField(max_length=100)
     category = models.ForeignKey('SkillCategory', on_delete=models.CASCADE)
     level = models.IntegerField()
-    user = models.ForeignKey('accounts.User', on_delete=models.CASCADE)
 
     def __str__(self):
         return self.name
@@ -66,7 +64,6 @@ class Certificate(models.Model):
     name = models.CharField(max_length=100)
     photo = models.ImageField(upload_to='certificate_pics', blank=True)
     year = models.IntegerField()
-    user = models.ForeignKey('accounts.User', on_delete=models.CASCADE)
 
     def __str__(self):
         return self.name
@@ -77,8 +74,6 @@ class Project(models.Model):
     role = models.CharField(max_length=100)
     description = models.TextField(max_length=500)
     year = models.IntegerField()
-    user = models.ForeignKey('accounts.User',
-                             on_delete=models.CASCADE)
 
     def __str__(self):
         return self.name
@@ -92,7 +87,6 @@ class Resume(models.Model):
     knowledge = models.ManyToManyField('Knowledge')
     acquired_skill = models.ManyToManyField(
         'AcquiredSkill')
-    user = models.ForeignKey('accounts.User', on_delete=models.CASCADE)
 
     def __str__(self):
         return self.name
