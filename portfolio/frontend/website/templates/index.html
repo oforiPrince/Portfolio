@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Prince Ofori - Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="Prince Ofori - Portfolio" />
+    <meta name="keywords"
+        content="vcard, resposnive, retina, resume, jquery, css3, bootstrap, Material CV, portfolio" />
+    <meta name="author" content="lmpixels" />
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/reset.css" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+    <link rel="stylesheet" href="css/animations.css" type="text/css">
+</head>
+
+<body>
+    <!-- Animated Background -->
+    <div class="lm-animated-bg" style="background-image: url(img/main_bg_3.jpg);"></div>
+    <!-- /Animated Background -->
+    <div class="half-bg"></div>
+    <div class="page">
+        <div class="page-content">
+            {% include "blocks/header.html" %}
+            <!-- Mobile Navigation -->
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <!-- End Mobile Navigation -->
+            <!-- Arrows Nav -->
+            <div class="lmpixels-arrows-nav">
+                <div class="lmpixels-arrow-right"><i class="lnr lnr-chevron-right"></i></div>
+                <div class="lmpixels-arrow-left"><i class="lnr lnr-chevron-left"></i></div>
+            </div>
+            <!-- End Arrows Nav -->
+            <div class="content-area">
+                <div class="animated-sections">
+
+                    <!-- About Me Subpage -->
+                    {% include "blocks/about-me.html" %}
+                    <!-- End of About Me Subpage -->
+                    <!-- Resume Subpage -->
+                    {% include "blocks/resume.html" %}
+                    <!-- End of Resume Subpage -->
+                    <!-- Portfolio Subpage -->
+                    {% include "blocks/portfolio.html" %}
+                    <!-- End of Portfolio Subpage -->
+                    <!-- Blog Subpage -->
+                    {% include "blocks/blog.html" %}
+                    <!-- End of Blog Subpage -->
+                    <!-- Contact Subpage -->
+                    {% include "blocks/contact.html" %}
+                    <!-- End of Contact Subpage -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/modernizr.custom.js"></script>
+    <script src="js/animating.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <script src='js/isotope.pkgd.min.js'></script>
+    <script src='js/owl.carousel.min.js'></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/validator.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
