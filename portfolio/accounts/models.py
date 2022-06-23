@@ -9,7 +9,8 @@ class User(AbstractBaseUser, PermissionsMixin):
     fullname = models.CharField(max_length=100)
     email = models.EmailField(max_length=100, unique=True)
     phone = models.CharField(max_length=10)
-    photo = models.ImageField(upload_to='profile_pics', blank=True)
+    photo = models.ImageField(
+        upload_to='uploads/profile_pics/', blank=True)
     carrier_summary = models.TextField(max_length=500)
 
     # Django stuff for authentication
