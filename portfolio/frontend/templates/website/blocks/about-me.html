@@ -7,18 +7,11 @@
             <div class="home-text hp-left">
 
                <div class="owl-carousel text-rotation">
+                  {% for career in user.careers.all %}
                   <div class="item">
-                     <h4>Web Designer</h4>
+                     <h4>{{career.title}}</h4>
                   </div>
-                  <div class="item">
-                     <h4>Frontend Developer</h4>
-                  </div>
-                  <div class="item">
-                     <h4>Backend Developer</h4>
-                  </div>
-                  <div class="item">
-                     <h4>Mobile App Developer</h4>
-                  </div>
+                  {% endfor %}
                </div>
 
                <h1>{{user.fullname}}</h1>

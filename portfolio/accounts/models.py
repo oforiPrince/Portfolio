@@ -2,6 +2,7 @@ from django.db import models
 
 from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin
 from .managers import AccountManager
+from backend.models import Career
 
 
 class User(AbstractBaseUser, PermissionsMixin):
@@ -11,6 +12,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     phone = models.CharField(max_length=10)
     photo = models.ImageField(
         upload_to='uploads/profile_pics/', blank=True)
+    careers = models.ManyToManyField(Career)
     carrier_summary = models.TextField(max_length=500)
 
     # Django stuff for authentication
