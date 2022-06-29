@@ -21,14 +21,8 @@
                   </div>
                </div>
 
-               <h1>Prince Ofori</h1>
-               <p>Dedicated, focused and self motivating Web/Fullstack developer who has 4
-                  years of
-                  experience in Information Technology, programming as well as building
-                  websites for
-                  clients. Proven
-                  ability to increase data retrieval and workflow efficiencies by optimizing
-                  functionalities.</p>
+               <h1>{{user.fullname}}</h1>
+               <p>{{user.carrier_summary}}</p>
 
                <div class="home-buttons">
                   <a href="#" target="_blank"
@@ -40,7 +34,7 @@
          </div>
          <div class="col-sm-12 col-md-6 col-lg-6">
             <div class="home-photo">
-               <div class="hp-inner" style="background-image: url('static/img/main_photo_1.jpg');">
+               <div class="hp-inner" style="background-image: url('{{user.photo.url}}');">
                </div>
             </div>
          </div>
@@ -172,7 +166,7 @@
                <!-- Testimonial 1 -->
                <div class="testimonial">
                   <div class="img">
-                     <img src="{% static 'img/testimonials/testimonial-1.jpg' %}" alt="Alex Smith">
+                     <img src="{% static 'img/testimonials/testimonial-1.jpg' %}" alt="{{user.fullname}}">
                   </div>
                   <div class="text">
                      <p>Vivamus at molestie dui, eu ornare orci. Curabitur vel egestas dolor.
@@ -193,7 +187,7 @@
                <!-- Testimonial 2 -->
                <div class="testimonial">
                   <div class="img">
-                     <img src="{% static 'img/testimonials/testimonial-2.jpg' %}" alt="Alex Smith">
+                     <img src="{% static 'img/testimonials/testimonial-2.jpg' %}" alt="{{user.fullname}}">
                   </div>
                   <div class="text">
                      <p>Vivamus at molestie dui, eu ornare orci. Curabitur vel egestas dolor.
@@ -214,7 +208,7 @@
                <!-- Testimonial 3 -->
                <div class="testimonial">
                   <div class="img">
-                     <img src="{% static 'img/testimonials/testimonial-3.jpg' %}" alt="Alex Smith">
+                     <img src="{% static 'img/testimonials/testimonial-3.jpg' %}" alt="{{user.fullname}}">
                   </div>
                   <div class="text">
                      <p>Vivamus at molestie dui, eu ornare orci. Curabitur vel egestas dolor.
