@@ -1,9 +1,13 @@
 from django.contrib import admin
 
-from .models import Project, Certificate, AcquiredSkill, SkillCategory,Testimonial
+from .models import Project, Certificate, AcquiredSkill, SkillCategory,Testimonial, Service, Knowledge,Social, School,Resume,
 
 admin.site.register(Project)
 admin.site.register(Certificate)
 admin.site.register(AcquiredSkill)
 admin.site.register(SkillCategory)
 admin.site.register(Testimonial)
+admin.site.register(Service)
+admin.site.register(Knowledge)
+admin.site.register(Social)
+admin.site.register(School)
