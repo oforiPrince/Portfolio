@@ -1638,42 +1638,6 @@ input[type=text],
     padding: 0
 }
 
-.skills-second-style .skill-container.skill-1 .skill-percentage {
-    width: 95%
-}
-
-.skills-second-style .skill-container.skill-2 .skill-percentage {
-    width: 65%
-}
-
-.skills-second-style .skill-container.skill-3 .skill-percentage {
-    width: 80%
-}
-
-.skills-second-style .skill-container.skill-4 .skill-percentage {
-    width: 90%
-}
-
-.skills-second-style .skill-container.skill-5 .skill-percentage {
-    width: 95%
-}
-
-.skills-second-style .skill-container.skill-6 .skill-percentage {
-    width: 85%
-}
-
-.skills-second-style .skill-container.skill-7 .skill-percentage {
-    width: 100%
-}
-
-.skills-second-style .skill-container.skill-8 .skill-percentage {
-    width: 75%
-}
-
-.skills-second-style .skill-container.skill-9 .skill-percentage {
-    width: 90%
-}
-
 .pt-page .skills-second-style .skill-percentage,
 .pt-page .skills-second-style .skill-value {
     -webkit-transition: all 2s ease-in-out;

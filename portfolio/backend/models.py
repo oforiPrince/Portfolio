@@ -1,4 +1,6 @@
 from django.db import models
+from django.core.validators import MinValueValidator, MaxValueValidator
+
 
 class Career(models.Model):
     title = models.CharField(max_length=100)
@@ -6,6 +8,7 @@ class Career(models.Model):
 
     def __str__(self):
         return self.title
+
 
 class School(models.Model):
     name = models.CharField(max_length=100)
@@ -54,8 +57,12 @@ class Knowledge(models.Model):
         return self.name
 
 
-class SkillCategory(models.Model):
+class Language(models.Model):
     name = models.CharField(max_length=100)
+    level = models.IntegerField(validators=[
+        MaxValueValidator(100),
+        MinValueValidator(1)
+    ], null=True, blank=True)
 
     def __str__(self):
         return self.name
@@ -63,8 +70,7 @@ class SkillCategory(models.Model):
 
 class AcquiredSkill(models.Model):
     name = models.CharField(max_length=100)
-    category = models.ForeignKey('SkillCategory', on_delete=models.CASCADE)
-    level = models.IntegerField()
+    languages = models.ManyToManyField(Language)
 
     def __str__(self):
         return self.name
@@ -119,7 +125,7 @@ class Project(models.Model):
 
 class Resume(models.Model):
     domain = models.CharField(max_length=100)
-    project = models.ManyToManyField('Project')
+    projects = models.ManyToManyField('Project')
     certificate = models.ManyToManyField(
         'Certificate')
     knowledge = models.ManyToManyField('Knowledge')
@@ -127,4 +133,4 @@ class Resume(models.Model):
         'AcquiredSkill')
 
     def __str__(self):
-        return self.name
+        return self.domain
