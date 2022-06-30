@@ -134,3 +134,13 @@ class Resume(models.Model):
 
     def __str__(self):
         return self.domain
+
+
+class SeekHelp(models.Model):
+    name = models.CharField(max_length=50)
+    email = models.EmailField()
+    subject = models.CharField(max_length=30)
+    message = models.TextField(max_length=100)
+
+    def __str__(self):
+        return self.name
